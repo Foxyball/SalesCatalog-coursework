@@ -1,1 +1,1 @@
-# MarketCatalog
+# SalesCatalog Coursework
