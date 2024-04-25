@@ -45,17 +45,21 @@
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.earningsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.button2 = new System.Windows.Forms.Button();
             this.earningsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.advchannelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.earningsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.earningsBindingNavigator)).BeginInit();
@@ -104,17 +108,20 @@
             // 
             // earningsDataGridView
             // 
+            this.earningsDataGridView.AllowUserToAddRows = false;
             this.earningsDataGridView.AutoGenerateColumns = false;
+            this.earningsDataGridView.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.earningsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.earningsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.monthDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn4,
             this.advchannelDataGridViewTextBoxColumn,
             this.incomeDataGridViewTextBoxColumn,
             this.expensesDataGridViewTextBoxColumn});
             this.earningsDataGridView.DataSource = this.earningsBindingSource;
-            this.earningsDataGridView.Location = new System.Drawing.Point(251, 89);
+            this.earningsDataGridView.Location = new System.Drawing.Point(250, 127);
             this.earningsDataGridView.Name = "earningsDataGridView";
             this.earningsDataGridView.Size = new System.Drawing.Size(760, 330);
             this.earningsDataGridView.TabIndex = 1;
@@ -151,13 +158,8 @@
             // 
             // bindingNavigatorAddNewItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -174,6 +176,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -213,6 +216,30 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // earningsBindingNavigatorSaveItem
+            // 
+            this.earningsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.earningsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("earningsBindingNavigatorSaveItem.Image")));
+            this.earningsBindingNavigatorSaveItem.Name = "earningsBindingNavigatorSaveItem";
+            this.earningsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.earningsBindingNavigatorSaveItem.Text = "Save Data";
+            this.earningsBindingNavigatorSaveItem.Click += new System.EventHandler(this.earningsBindingNavigatorSaveItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(158, 127);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 37);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Обнови";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -231,19 +258,15 @@
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
-            // bindingNavigatorSeparator2
+            // button2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // earningsBindingNavigatorSaveItem
-            // 
-            this.earningsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.earningsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("earningsBindingNavigatorSaveItem.Image")));
-            this.earningsBindingNavigatorSaveItem.Name = "earningsBindingNavigatorSaveItem";
-            this.earningsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.earningsBindingNavigatorSaveItem.Text = "Save Data";
-            this.earningsBindingNavigatorSaveItem.Click += new System.EventHandler(this.earningsBindingNavigatorSaveItem_Click);
+            this.button2.Location = new System.Drawing.Point(704, 463);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(147, 37);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Запиши";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // earningsBindingSource
             // 
@@ -267,6 +290,12 @@
             this.monthDataGridViewTextBoxColumn.HeaderText = "Month";
             this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
             // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Category";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Category";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
             // advchannelDataGridViewTextBoxColumn
             // 
             this.advchannelDataGridViewTextBoxColumn.DataPropertyName = "Adv_channel";
@@ -285,6 +314,16 @@
             this.expensesDataGridViewTextBoxColumn.HeaderText = "Expenses";
             this.expensesDataGridViewTextBoxColumn.Name = "expensesDataGridViewTextBoxColumn";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(542, 463);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(147, 37);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Добави";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +331,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1194, 661);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.earningsBindingNavigator);
             this.Controls.Add(this.earningsDataGridView);
             this.Controls.Add(this.menuStrip1);
@@ -334,17 +376,21 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
         private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton earningsBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn monthDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn advchannelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn incomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expensesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

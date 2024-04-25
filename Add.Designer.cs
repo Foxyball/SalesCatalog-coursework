@@ -34,9 +34,8 @@
             System.Windows.Forms.Label expensesLabel;
             System.Windows.Forms.Label incomeLabel;
             System.Windows.Forms.Label monthLabel;
-            System.Windows.Forms.Label label1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add));
             System.Windows.Forms.Label label2;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add));
             this.earningsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.earningsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -56,22 +55,25 @@
             this.cat_listBox1 = new System.Windows.Forms.ListBox();
             this.month_dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.expenses_numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.IDnumericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.name_textBox1 = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             adv_channelLabel = new System.Windows.Forms.Label();
             categoryLabel = new System.Windows.Forms.Label();
             expensesLabel = new System.Windows.Forms.Label();
             incomeLabel = new System.Windows.Forms.Label();
             monthLabel = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.earningsBindingNavigator)).BeginInit();
             this.earningsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.earningsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.income_numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenses_numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown3)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // adv_channelLabel
@@ -119,14 +121,15 @@
             monthLabel.TabIndex = 9;
             monthLabel.Text = "month:";
             // 
-            // label1
+            // label2
             // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(507, 126);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(24, 13);
-            label1.TabIndex = 15;
-            label1.Text = "ID: ";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(507, 152);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(41, 13);
+            label2.TabIndex = 18;
+            label2.Text = "Name: ";
+            label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // earningsBindingNavigator
             // 
@@ -304,13 +307,6 @@
             this.expenses_numericUpDown2.Size = new System.Drawing.Size(112, 20);
             this.expenses_numericUpDown2.TabIndex = 14;
             // 
-            // IDnumericUpDown3
-            // 
-            this.IDnumericUpDown3.Location = new System.Drawing.Point(582, 123);
-            this.IDnumericUpDown3.Name = "IDnumericUpDown3";
-            this.IDnumericUpDown3.Size = new System.Drawing.Size(63, 20);
-            this.IDnumericUpDown3.TabIndex = 16;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(529, 328);
@@ -321,16 +317,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(507, 152);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(41, 13);
-            label2.TabIndex = 18;
-            label2.Text = "Name: ";
-            label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // name_textBox1
             // 
             this.name_textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.earningsBindingSource, "adv_channel", true));
@@ -340,6 +326,44 @@
             this.name_textBox1.TabIndex = 19;
             this.name_textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.reportToolStripMenuItem,
+            this.searchToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1248, 24);
+            this.menuStrip1.TabIndex = 20;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Enabled = false;
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Text = "Add";
+            // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.searchToolStripMenuItem.Text = "Search";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,11 +371,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1248, 639);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(label2);
             this.Controls.Add(this.name_textBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.IDnumericUpDown3);
-            this.Controls.Add(label1);
             this.Controls.Add(this.expenses_numericUpDown2);
             this.Controls.Add(this.month_dateTimePicker1);
             this.Controls.Add(this.cat_listBox1);
@@ -365,13 +388,15 @@
             this.Controls.Add(this.earningsBindingNavigator);
             this.Name = "Add";
             this.Text = "Добавяне - Рекламен каталог v0.1";
+            this.Load += new System.EventHandler(this.Add_Load);
             ((System.ComponentModel.ISupportInitialize)(this.earningsBindingNavigator)).EndInit();
             this.earningsBindingNavigator.ResumeLayout(false);
             this.earningsBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.earningsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.income_numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenses_numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown3)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,9 +422,13 @@
         private System.Windows.Forms.NumericUpDown income_numericUpDown1;
         private System.Windows.Forms.ListBox cat_listBox1;
         private System.Windows.Forms.NumericUpDown expenses_numericUpDown2;
-        private System.Windows.Forms.NumericUpDown IDnumericUpDown3;
         private System.Windows.Forms.DateTimePicker month_dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox name_textBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
