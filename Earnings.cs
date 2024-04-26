@@ -59,5 +59,11 @@ namespace MarketCatalog
             get { return expenses; }
             set { expenses = value; }
         }
+
+        // calculate profit
+        public double Profit
+        {
+            get { return income - expenses; }
+        }
     }
 }

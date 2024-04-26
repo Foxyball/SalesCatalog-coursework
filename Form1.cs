@@ -25,9 +25,13 @@ namespace MarketCatalog
         {
             InitializeComponent();
             earningsBindingSource.DataSource = list;
+
         }
 
-       private bool findID(Earnings id_item)
+
+ 
+
+        private bool findID(Earnings id_item)
         {
             if (id_item.Id== earningsDataGridView.CurrentRow.Index)
             {
@@ -79,35 +83,12 @@ namespace MarketCatalog
         }
 
 
-        // T0D0
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
-        {
-            if (earningsDataGridView.SelectedRows.Count > 0)
-            {
-                int selectedIndex = earningsDataGridView.SelectedRows[0].Index;
-                Earnings selectedEarnings = list[selectedIndex];
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this item?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    list.RemoveAt(selectedIndex);
-                    earningsDataGridView.DataSource = null;
-                    earningsDataGridView.DataSource = list;
-                    earningsDataGridView.Refresh();
-
-                    SaveToFile();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select an item to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
 
         // Navigation buttons (Exit)
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Изход?", "Изход", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 Application.Exit();
@@ -149,6 +130,55 @@ namespace MarketCatalog
         {
             Add add = new Add();
             add.ShowDialog();
+        }
+
+        // Delete button
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+
+            if (earningsDataGridView.SelectedRows.Count > 0)
+            {
+                int index = earningsDataGridView.SelectedRows[0].Index;
+                //Earnings selectedEarnings = list[index];
+                DialogResult result = MessageBox.Show("Сигурни ли сте, че искате да изтриете?", "Изтриване", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    list.RemoveAt(index);
+                    earningsDataGridView.DataSource = null;
+                    earningsDataGridView.DataSource = list;
+                    earningsDataGridView.Refresh();
+
+                    SaveToFile();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Моля, изберете ред, който да изтриете.", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Search button
+        private void button4_Click(object sender, EventArgs e)
+        {   
+
+            if (searchBox.Text != "")
+            {
+                List<Earnings> search = new List<Earnings>();
+                foreach (var i in list)
+                {
+                  if (i.Category.ToLower().Contains(searchBox.Text.ToLower()) || i.Adv_channel.ToLower().Contains(searchBox.Text.ToLower())) // <?php if(isset($_POST['search'])) ?>
+                    {
+                        search.Add(i);
+                    }
+                }
+                earningsDataGridView.DataSource = null;
+                earningsDataGridView.DataSource = search;
+                earningsDataGridView.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Моля, въведете ключова дума за търсене.", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     } // end of class
 } // end of namespace

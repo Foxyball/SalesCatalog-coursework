@@ -59,8 +59,6 @@
             this.name_textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             adv_channelLabel = new System.Windows.Forms.Label();
             categoryLabel = new System.Windows.Forms.Label();
@@ -272,6 +270,11 @@
             // income_numericUpDown1
             // 
             this.income_numericUpDown1.Location = new System.Drawing.Point(582, 273);
+            this.income_numericUpDown1.Maximum = new decimal(new int[] {
+            30000,
+            0,
+            0,
+            0});
             this.income_numericUpDown1.Name = "income_numericUpDown1";
             this.income_numericUpDown1.Size = new System.Drawing.Size(112, 20);
             this.income_numericUpDown1.TabIndex = 11;
@@ -303,6 +306,11 @@
             // expenses_numericUpDown2
             // 
             this.expenses_numericUpDown2.Location = new System.Drawing.Point(582, 232);
+            this.expenses_numericUpDown2.Maximum = new decimal(new int[] {
+            30000,
+            0,
+            0,
+            0});
             this.expenses_numericUpDown2.Name = "expenses_numericUpDown2";
             this.expenses_numericUpDown2.Size = new System.Drawing.Size(112, 20);
             this.expenses_numericUpDown2.TabIndex = 14;
@@ -330,8 +338,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
-            this.reportToolStripMenuItem,
-            this.searchToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -345,18 +351,6 @@
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.addToolStripMenuItem.Text = "Add";
-            // 
-            // reportToolStripMenuItem
-            // 
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.reportToolStripMenuItem.Text = "Report";
-            // 
-            // searchToolStripMenuItem
-            // 
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.searchToolStripMenuItem.Text = "Search";
             // 
             // exitToolStripMenuItem
             // 
@@ -427,8 +421,6 @@
         private System.Windows.Forms.TextBox name_textBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
