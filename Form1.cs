@@ -16,7 +16,7 @@ namespace MarketCatalog
 {
     public partial class Form1 : System.Windows.Forms.Form
     {
-
+        // global variables
         public const string PATH = "articles.dat";
         public List<Earnings> list = new List<Earnings>();
         public BinaryFormatter bf = new BinaryFormatter();
@@ -29,24 +29,10 @@ namespace MarketCatalog
         }
 
 
- 
-
-        private bool findID(Earnings id_item)
-        {
-            if (id_item.Id== earningsDataGridView.CurrentRow.Index)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-
         // Main form load
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Check if file exists && dummy data
             if (!File.Exists(PATH))
             {
                 FileStream fs = new FileStream(PATH, FileMode.Create);

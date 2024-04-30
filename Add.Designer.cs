@@ -77,56 +77,56 @@
             // adv_channelLabel
             // 
             adv_channelLabel.AutoSize = true;
-            adv_channelLabel.Location = new System.Drawing.Point(507, 183);
+            adv_channelLabel.Location = new System.Drawing.Point(482, 183);
             adv_channelLabel.Name = "adv_channelLabel";
-            adv_channelLabel.Size = new System.Drawing.Size(69, 13);
+            adv_channelLabel.Size = new System.Drawing.Size(94, 13);
             adv_channelLabel.TabIndex = 1;
-            adv_channelLabel.Text = "adv channel:";
+            adv_channelLabel.Text = "Рекламен канал:";
             // 
             // categoryLabel
             // 
             categoryLabel.AutoSize = true;
             categoryLabel.Location = new System.Drawing.Point(507, 209);
             categoryLabel.Name = "categoryLabel";
-            categoryLabel.Size = new System.Drawing.Size(51, 13);
+            categoryLabel.Size = new System.Drawing.Size(63, 13);
             categoryLabel.TabIndex = 3;
-            categoryLabel.Text = "category:";
+            categoryLabel.Text = "Категория:";
             // 
             // expensesLabel
             // 
             expensesLabel.AutoSize = true;
             expensesLabel.Location = new System.Drawing.Point(507, 235);
             expensesLabel.Name = "expensesLabel";
-            expensesLabel.Size = new System.Drawing.Size(55, 13);
+            expensesLabel.Size = new System.Drawing.Size(52, 13);
             expensesLabel.TabIndex = 5;
-            expensesLabel.Text = "expenses:";
+            expensesLabel.Text = "Разходи:";
             // 
             // incomeLabel
             // 
             incomeLabel.AutoSize = true;
             incomeLabel.Location = new System.Drawing.Point(507, 279);
             incomeLabel.Name = "incomeLabel";
-            incomeLabel.Size = new System.Drawing.Size(44, 13);
+            incomeLabel.Size = new System.Drawing.Size(53, 13);
             incomeLabel.TabIndex = 7;
-            incomeLabel.Text = "income:";
+            incomeLabel.Text = "Печалба:";
             // 
             // monthLabel
             // 
             monthLabel.AutoSize = true;
             monthLabel.Location = new System.Drawing.Point(507, 305);
             monthLabel.Name = "monthLabel";
-            monthLabel.Size = new System.Drawing.Size(39, 13);
+            monthLabel.Size = new System.Drawing.Size(43, 13);
             monthLabel.TabIndex = 9;
-            monthLabel.Text = "month:";
+            monthLabel.Text = "Месец:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(507, 152);
+            label2.Location = new System.Drawing.Point(482, 152);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(41, 13);
+            label2.Size = new System.Drawing.Size(90, 13);
             label2.TabIndex = 18;
-            label2.Text = "Name: ";
+            label2.Text = "Име на артикул:";
             label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // earningsBindingNavigator
@@ -321,7 +321,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 40);
             this.button1.TabIndex = 17;
-            this.button1.Text = "Add";
+            this.button1.Text = "Запиши";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
