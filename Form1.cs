@@ -36,9 +36,9 @@ namespace MarketCatalog
             if (!File.Exists(PATH))
             {
                 FileStream fs = new FileStream(PATH, FileMode.Create);
-                list.Add(new Earnings { Id = 1, Name = "Demo", Month = "April", Category = "Electronics", Adv_channel = "Demo", Income = 1000, Expenses = 500 });
-                list.Add(new Earnings { Id = 2, Name = "Demo2", Month = "July", Category = "Electronics", Adv_channel = "Demo", Income = 1000, Expenses = 500 });
-                list.Add(new Earnings { Id = 3, Name = "Demo3", Month = "April", Category = "Clothes", Adv_channel = "Demo", Income = 1000, Expenses = 500 });
+                list.Add(new Earnings { Id = 1, Name = "Demo", Month = "04/2024", Category = "Electronics", Adv_channel = "Demo", Income = 1000, Expenses = 500 });
+                list.Add(new Earnings { Id = 2, Name = "Demo2", Month = "05/2024", Category = "Electronics", Adv_channel = "Demo", Income = 1000, Expenses = 500 });
+                list.Add(new Earnings { Id = 3, Name = "Demo3", Month = "06/2024", Category = "Clothes", Adv_channel = "Demo", Income = 1000, Expenses = 500 });
                 bf.Serialize(fs, list);
 
                 fs.Close();
