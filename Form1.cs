@@ -102,6 +102,10 @@ namespace MarketCatalog
             LoadFromFile();
             earningsDataGridView.DataSource = null;
             earningsDataGridView.DataSource = list;
+
+            // show unnecessary columns
+            earningsDataGridView.Columns[3].Visible = true;
+            earningsDataGridView.Columns[4].Visible = true;
         }
 
         // Add button (same as earningsBindingNavigatorSaveItem_Click)
@@ -159,6 +163,25 @@ namespace MarketCatalog
                 }
                 earningsDataGridView.DataSource = null;
                 earningsDataGridView.DataSource = search;
+
+
+
+                // hiding unnecessary columns
+                earningsDataGridView.Columns[3].Visible = false;
+                earningsDataGridView.Columns[4].Visible = false;
+
+                listBox1.Items.Clear();
+                foreach(var i in search)
+                {
+                    listBox1.Items.Add("Име: " + i.Name + " Месец: " + i.Month + " Стойност: " + (i.Income - i.Expenses) + " лв.");
+                    //listBox1.Items.Add(i.Category);
+                    //listBox1.Items.Add(i.Adv_channel);
+                }
+
+                listBox1.Visible = true;
+                listBox1.Refresh();
+
+
                 earningsDataGridView.Refresh();
             }
             else
